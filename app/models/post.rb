@@ -8,4 +8,3 @@ class Post < ActiveRecord::Base
 	# Validate the attached image is image/jpg, image/png, etc
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 end
-end
