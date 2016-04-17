@@ -8,6 +8,7 @@ Rails.application.routes.draw do
    resources :posts
    post 'post/:id/enroll'=> 'posts#enroll'
    post 'post/:id/recognize'=> 'posts#recognize'
+  #  post 'post/:id/ctc'=> 'posts#'
 
 
   # Example of regular route:
