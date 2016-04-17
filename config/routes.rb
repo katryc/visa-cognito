@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'landing#index'
 
+   resources :posts
+   post 'post/:id/enroll'=> 'posts#enroll'
+   post 'post/:id/recognize'=> 'posts#recognize'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
