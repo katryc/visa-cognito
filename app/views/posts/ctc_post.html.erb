@@ -12,8 +12,11 @@
           <select id="condition" name='condition' onchange="calculateTotal()">
             <option value="None">Select unlock time</option>
             <option value="15min">15 minutes</option>
+             <%= ctc_post(wait_time) %>
             <option value="anhour">1 hour</option>
+            <%= ctc_post(wait_time) %>
               <option value="3hours">3 hours</option>
+            <%= ctc_post(wait_time) %>
             <br/>
           </select>
           <br/>
@@ -72,4 +75,4 @@ function getMuvrPrice()
   //We return the MuvrTypePrice
   return MuvrTypePrice;
 }
-</script>   
+</script>
