@@ -1,25 +1,23 @@
 <div class="container">
 <div class="row align center">
 
-	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'TAKE A PHOTO',posts_path  %>
+<div class="btn-large waves-effect waves-light teal lighten-1" type="submit" name="action">
 		<%= form_for @post do |f| %>
+				 <input type="file" accept="video/*;capture=camera">
+    <% end %>
 
-			 <p>
-				 <%= f.file_field :image %>
-			 </p>
-
-			 <%= f.submit %>
-		<% end %>
-	</div>
-	</div>
+</div>
 </div>
 </div>
 
 
 <div class="row align center">
-	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Back', root_path %></div>
+	<div class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Back', root_path %></div>
 </div>
 <div class="row align center">
-  <i class="material-icons prefix">phone</i>
-	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Call Customer Support', root_path %></div>
+  <i class="material-icons">phone</i>
+	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1" class="text center">
+		 <%= link_to 'CALL CUSTOMER SUPPORT', root_path %>
+
+  </div>
 </div>

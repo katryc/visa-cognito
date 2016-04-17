@@ -8,12 +8,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   
+
 
    resources :posts
    post 'post/:id/enroll'=> 'posts#enroll'
    post 'post/:id/recognize'=> 'posts#recognize'
-  #  post 'post/:id/ctc'=> 'posts#'
+   post "post/ctc_post"=> 'posts#ctc_post'
 
 
   # Example of regular route:

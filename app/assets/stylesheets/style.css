@@ -10,17 +10,15 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
-.material-icons {color: #26a69a;
-   
+.material-icons {color:#122d98 ;
+   background-color: #26a69a;
    font-size: 3.5em !important;
-   background-color: #727275;}
+   margin-bottom: 30px;
+   }
 p {
   line-height: 2rem;
 }
-input#password.validate {
-  height: !important 100px;
-  margin-top: !important 50px;
-}
+
 .header {
   font-size: 2.5em;
   margin-bottom: 50px;
@@ -31,14 +29,17 @@ a {color: white;}
   justify-content: center;
 }
 .button-collapse {
-  color: #26a69a;
+  color: #122d98;
+}
+.button {
+  color: #122d98;
 }
 #sbmt{
   margin-bottom: 50px;
 }
 
 #container {
-    margin: 0px auto;
+    margin: 10px auto;
     width: 500px;
     height: 375px;
     border: 10px #333 solid;
