@@ -1,67 +1,7 @@
+<div class="container">
+  <br><br>
+  <div class="row center">
+  <a id="logo-container" href="logo.png"><img src="assets/logo.png" alt="Mountain View" style="width:148px;height:70px;"></a>
+</div>
 <h2>I am the post!</h2>
-<%=link_to "Back", new_post_path %>
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>eMerge Hackathon</title>
-
-  <!-- CSS  -->
-
-  <script src="materialize.js"></script>
-  <script src="init.js"></script>
-
-
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-
-      <div class="container">
-        <br><br>
-        <div class="row center">
-        <a id="logo-container" href="logo.png"><img src="assets/logo.png" alt="Mountain View" style="width:148px;height:70px;"></a>
-      </div>
-        <h1 class="header center teal-text text-lighten-2">Unlock Authorization</h1>
-        <div class="center align">
-
-        <div class="row">
-          <div class="input-field col s12 left-align">
-            <input id="password" type="password" class="validate">
-            <label for="pin">Enter PIN</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l8 s12">
-          <div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'SEND THE PIN', new_post_path %></div>
-          <a href="#" id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"></h2>Resend PIN</a>
-
-          </div>
-        </div>
-      </div>
-      </div>
-
-    <br>
-    <div class="footer-copyright">
-      <div class="container">
-      Hacked by <a class="indigo-text" href="http://www.helloidesignstuff.com">Frank Rycak Jr</a>, <a class="indigo-text" href="http://www.helloidesignstuff.com">Kat Markava</a>, <a class="indigo-text" href="http://www.helloidesignstuff.com">Neil Haines</a>, <a class="indigo-text" href="http://www.helloidesignstuff.com">George Go-Garden</a>, <a class="indigo-text" href="http://www.helloidesignstuff.com">Brenno Mateos</a>
-      </div>
-    </div>
-  </footer>
-
-
-
-
-  </body>
-</html>
+<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%=link_to "Back", new_post_path %></div>
