@@ -7,15 +7,15 @@
 
 
           <br/>
-          <label >Select Unlock Time</label>
+          <label >Select Time Allowance</label>
 
           <select id="condition" name='condition' onchange="calculateTotal()">
-            <option value="None">Select unlock time</option>
+            <option value="None">Select time allowance for E-Commerce purchases.</option>
             <option value="15min">15 minutes</option>
              <%= ctc_post(wait_time) %>
             <option value="anhour">1 hour</option>
             <%= ctc_post(wait_time) %>
-              <option value="3hours">3 hours</option>
+            <option value="3hours">3 hours</option>
             <%= ctc_post(wait_time) %>
             <br/>
           </select>
@@ -26,7 +26,7 @@
 
 <script>
 function myFunction() {
-    alert("Your account has been unlocked!");
+    alert("Your credit card is now unlocked for e-commerce transactions.");
 }
 
 
@@ -46,7 +46,7 @@ wait_time["3hours"]=180;
 
 function getMuvrPrice()
 {
-  var MuvrTypePrice=0;
+  var wait_time_int=0;
   //Get a reference to the form id="rateform"
   var theForm = document.forms["rateform"];
 
@@ -63,13 +63,13 @@ function getMuvrPrice()
       //by using the muvr_prices array
       //We get the selected Items value
       //For example muvr_prices["Round8".value]"
-      MuvrTypePrice = wait_time[selectedpath[i].value];
+      wait_time_int = wait_time[selectedpath[i].value];
       //If we get a match then we break out of this loop
       //No reason to continue if we get a match
       break;
     }
   }
   //We return the MuvrTypePrice
-  return MuvrTypePrice;
+  return wait_time_int;
 }
 </script>
