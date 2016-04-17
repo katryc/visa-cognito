@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :find_post, except: [:index, :new, :create, :ctc_post]
+  before_action :find_post, except: [:index, :new, :create]
 
   def index
     @array = []
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     if @post.save
       recognize
-      redirect_to posts_path
+
     else
       render :new
     end
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :image, :wait_time)
+    params.require(:post).permit(:title, :image)
   end
 
   def find_post

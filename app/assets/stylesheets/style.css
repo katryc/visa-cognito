@@ -10,7 +10,10 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
-
+.material-icons {color: #26a69a;
+   
+   font-size: 3.5em !important;
+   background-color: #727275;}
 p {
   line-height: 2rem;
 }
