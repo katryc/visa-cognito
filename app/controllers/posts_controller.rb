@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :find_post, except: [:index, :new, :create]
+  before_action :find_post, except: [:index, :new, :create, :ctc_post]
 
   def index
     @array = []
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :image)
+    params.require(:post).permit(:title, :image, :wait_time)
   end
 
   def find_post

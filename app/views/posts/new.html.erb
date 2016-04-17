@@ -1,70 +1,21 @@
-<%= form_for @post do |f| %>
-	<p>
-    	<%= f.label :title %>
-    	<%= f.text_field :title %>
-  	</p>
-  	<p>
-    	<%= f.file_field :image %>
-  	</p>
+<div class="container">
+<div class="row align center">
 
-  	<%= f.submit %>
-<% end %>
-<div class="row">
-	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Back', root_path %></div>
-</div>
+	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'TAKE A PHOTO',posts_path  %>
+		<%= form_for @post do |f| %>
 
-<div class="row center">
-	<div id="container">
-		<video autoplay="true" id="videoElement">
-		</video>
-		<div id="snap" class="btn-large waves-effect waves-light teal lighten-1">Take Photo</div>
+			 <p>
+				 <%= f.file_field :image %>
+			 </p>
+
+			 <%= f.submit %>
+		<% end %>
+	</div>
 	</div>
 </div>
+</div>
 
-<script type="text/javascript">
-var video = document.querySelector("#videoElement");
 
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-
-if (navigator.getUserMedia) {
-	navigator.getUserMedia({video: true}, handleVideo, videoError);
-}
-
-function handleVideo(stream) {
-	video.src = window.URL.createObjectURL(stream);
-}
-
-function videoError(e) {
-	// do something
-}
-document.getElementById("snap").addEventListener("click", function() {
-	context.drawImage(video, 0, 0, 640, 480);
-});
-</script>
-
-<h2>Use the recorder</h2>
-<div class="microphone">
-<input type="file" accept="audio/*;capture=microphone">
-<script>
-function hasGetUserMedia() {
-  return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
-            navigator.mozGetUserMedia || navigator.msGetUserMedia);
-}
-
-if (!navigator.getUserMedia)
-        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-                      navigator.mozGetUserMedia || navigator.msGetUserMedia;
-
-if (navigator.getUserMedia){
-    navigator.getUserMedia({audio:true}, success, function(e) {
-    alert('Error capturing audio.');
-    });
-} else alert('getUserMedia not supported in this browser.');
-
-if (hasGetUserMedia()) {
-  // Good to go!
-} else {
-  alert('getUserMedia() is not supported in your browser');
-}
-</script>
+<div class="row align center">
+	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Back', root_path %></div>
 </div>

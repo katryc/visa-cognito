@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  root 'landing#index'
+
+  get 'headshot_demo/index'
+
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'landing#index'
+   
 
    resources :posts
    post 'post/:id/enroll'=> 'posts#enroll'

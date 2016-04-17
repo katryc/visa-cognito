@@ -31,19 +31,16 @@ function myFunction() {
 
 
 
-var muvr_prices = new Array();
-muvr_prices["Round6"]=40;
-muvr_prices["Round8"]=80;
 
 
 //Set up an associative array
 //The keys represent the condition type
 //The value represents the cost of the condition i.e. Intercounty condition is $5,Dobash condition is $9
 //We use this this array when the user selects a condition from the form
-var condition_prices= new Array();
-condition_prices["15min"]=15;
-condition_prices["anhour"]=60;
-condition_prices["3hours"]=180;
+var wait_time = new Array();
+wait_time["15min"]=15;
+wait_time["anhour"]=60;
+wait_time["3hours"]=180;
 
 
 
@@ -66,7 +63,7 @@ function getMuvrPrice()
       //by using the muvr_prices array
       //We get the selected Items value
       //For example muvr_prices["Round8".value]"
-      MuvrTypePrice = muvr_prices[selectedpath[i].value];
+      MuvrTypePrice = wait_time[selectedpath[i].value];
       //If we get a match then we break out of this loop
       //No reason to continue if we get a match
       break;

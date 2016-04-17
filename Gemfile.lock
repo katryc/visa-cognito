@@ -75,6 +75,7 @@ GEM
     ezcrypto (0.7.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    headshot (0.1.6)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     httparty (0.13.7)
@@ -204,6 +205,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  headshot
   httparty
   jbuilder (~> 2.0)
   jquery-rails

@@ -22,7 +22,7 @@ input#password.validate {
   font-size: 2.5em;
   margin-bottom: 50px;
 }
-
+a {color: white;}
 
 #toggle {
   justify-content: center;
