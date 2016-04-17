@@ -9,4 +9,35 @@
 
   	<%= f.submit %>
 <% end %>
-<%=link_to "Back", root_path %>
+<div class="row">
+	<div id="sbmt" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to 'Back', root_path %></div>
+</div>
+
+<div class="row center">
+	<div id="container">
+		<video autoplay="true" id="videoElement">
+		</video>
+		<div id="snap" class="btn-large waves-effect waves-light teal lighten-1">Take Photo</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var video = document.querySelector("#videoElement");
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+if (navigator.getUserMedia) {
+	navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+
+function handleVideo(stream) {
+	video.src = window.URL.createObjectURL(stream);
+}
+
+function videoError(e) {
+	// do something
+}
+document.getElementById("snap").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+</script>
